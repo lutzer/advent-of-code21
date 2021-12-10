@@ -118,7 +118,7 @@ impl AoCSolution for Solution  {
 
 fn main() {
     run(
-        "Advent of Code day 01", 
+        "Advent of Code day 04", 
         &fs::read_to_string("input.txt").expect("Input Error"), 
         &Solution {}
     );
