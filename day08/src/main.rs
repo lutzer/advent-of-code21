@@ -127,11 +127,11 @@ impl AoCSolution for Solution  {
 
         fn decode_output(output: &Vec<&str>, digits: &Vec<String>) -> u32 {
             let mut sum = 0;
-            for (i,&o) in output.iter().enumerate() {
+            for (i,&o) in output.iter().rev().enumerate() {
                 let digit = digits.iter().position(|x| { 
                     return has_same_chars(x,o);
                 }).unwrap() as u32;
-                sum += digit * (10 as u32).pow(3-i as u32);
+                sum += digit * (10 as u32).pow(i as u32);
             }
             return sum;
         }
