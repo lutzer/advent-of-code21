@@ -4,12 +4,6 @@ use aoc_utils::{AoCSolution, run};
 
 struct Solution {}
 
-#[derive(Debug)]
-struct Instruction {
-    from: (u32,u32),
-    to: (u32,u32)
-}
-
 impl AoCSolution for Solution  {
     fn part1(&self, input: &String) -> i64 {
         let mut lanternfishes : Vec<u32> = input.trim_end().split(",").map(|x| {
