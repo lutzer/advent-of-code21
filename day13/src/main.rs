@@ -39,8 +39,6 @@ impl AoCSolution for Solution  {
         return (splits[0].chars().last().unwrap(), splits[1].parse::<u32>().unwrap());
       }).collect();
 
-      // print_page(&points);
-
       for (axis,fold_pos) in folds.into_iter().take(1) {
         match axis {
           'x' => {
