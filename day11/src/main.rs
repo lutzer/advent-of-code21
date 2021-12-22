@@ -64,9 +64,8 @@ impl AoCSolution for Solution  {
         for _ in 0..100 {
             octopus_map = octopus_map.iter().map(|o| o + 1).collect();
 
-            let cloned_map = octopus_map.clone();
-            let mut flash_queue = cloned_map.iter().enumerate().filter(|(i,o)| **o > 9)
-                .map(|x| x.0).collect::<Vec<usize>>();
+            let mut flash_queue = octopus_map.iter().clone().enumerate().filter(|(_,o)| **o > 9)
+                .map(|(i,_)| i).collect::<Vec<usize>>();
 
             let mut flashed = vec![];
 
@@ -104,9 +103,8 @@ impl AoCSolution for Solution  {
         loop {
             octopus_map = octopus_map.iter().map(|o| o + 1).collect();
 
-            let cloned_map = octopus_map.clone();
-            let mut flash_queue = cloned_map.iter().enumerate().filter(|(i,o)| **o > 9)
-                .map(|x| x.0).collect::<Vec<usize>>();
+            let mut flash_queue = octopus_map.iter().clone().enumerate().filter(|(_,o)| **o > 9)
+                .map(|(i,_)| i).collect::<Vec<usize>>();
 
             let mut flashed = vec![];
 

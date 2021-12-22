@@ -12,6 +12,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "aoc_solution"
+version = "0.1.0"
+dependencies = [
+ "aoc_utils",
+ "indoc",
+]
+
+[[package]]
 name = "aoc_utils"
 version = "0.1.0"
 dependencies = [
@@ -48,14 +56,6 @@ dependencies = [
  "textwrap",
  "unicode-width",
  "vec_map",
-]
-
-[[package]]
-name = "day01"
-version = "0.1.0"
-dependencies = [
- "aoc_utils",
- "indoc",
 ]
 
 [[package]]

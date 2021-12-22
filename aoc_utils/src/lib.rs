@@ -2,10 +2,11 @@ use clap::{Arg, App};
 
 pub fn run(title: &str, input: &String, s: &dyn AoCSolution) {
   let args = App::new(title)
-  .arg(Arg::with_name("part")
-  .takes_value(true)
-  .required(true))
-  .get_matches();
+    .arg(Arg::with_name("part")
+      .long("part")
+      .takes_value(true)
+      .required(true))
+    .get_matches();
 
   let part = args.value_of("part").unwrap_or("").to_string();
 
