@@ -26,7 +26,6 @@ impl AoCSolution for Solution  {
         return acc;
       });
 
-
       for _ in 0..10 {
         let template_pairs = get_string_pairs(&template);
         let mut new_insertions = vec![];
