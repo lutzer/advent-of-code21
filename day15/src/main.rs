@@ -1,6 +1,4 @@
-use std::collections::HashMap;
 use std::fs;
-use std::io::{stdin, Read, Write};
 
 use aoc_utils::{AoCSolution, run};
 
